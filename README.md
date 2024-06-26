@@ -65,5 +65,34 @@ while condition:
     print('x is greater than y')
     y = y + 1
     condition = x > y
->>>> 
->>>> 
+>>>
+>>>
+
+=============================================================================================++
+def outer_function(x):
+    def inner_function(y):
+        return x + y
+    return inner_function
+
+
+closure = outer_function(10)
+two_adder = outer_function(2)
+four_adder = outer_function(4)
+#result = closure(5)
+#print(result)  # Output: 15
+two_adder(6)
+#print(outer_function(10))
+print(two_adder(5), four_adder(5) , closure (3))
+
+>>> how can i call a function? by calling the function name and passing an argument to the saved variables,
+>>> so if i need to call the outer function i can call just the adder(which already saved the value of x) , and am putting a value for the (y) to pass the argument to y in the inner function
+>>>
+>>> here is another example:
+>>>def outer_function(x):
+    def inner_function(y):
+        return x + y
+    return inner_function
+
+closure = outer_function(10)
+result = closure(5)
+print(result)  # Output: 15  
